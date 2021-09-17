@@ -1,8 +1,10 @@
 To successfully run this project, you'll need to:
 
-. Change the IP address indicated in the RSocketRequester bean creation method to the local IP address to which the related PlaneFinder service is deployed
+. Change the IP address indicated in the `RSocketRequester` bean creation method to the local IP address to which the related PlaneFinder service is deployed
 . Ensure Docker Desktop (on Mac or Windows) or Docker is running locally
 . Build from the terminal window/command line using `mvn spring-boot:build-image` from the project directory
 . Execute the container using `docker run --rm -p 9090:9090 -p 9091:9091 thing1:0.0.1-SNAPSHOT`
+
+NOTE: The resultant container image is a layered container that compiles this application using GraalVM/Spring Native, i.e. "native image"
 
 Please refer to parent repo at https://github.com/mkheck/spring-boot-omakase for more details.
